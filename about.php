@@ -7,7 +7,7 @@
 <?php
 	 include"top_nav.php";
 ?>
-<?php include"chatbox.php";?>
+
 	
     <!-- Page Content -->
     <div class="container" style="margin-top:70px;">

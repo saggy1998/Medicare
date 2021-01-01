@@ -19,7 +19,7 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 
 <?php include"top_nav.php";?>
-<?php include"chatbox.php";?>
+
 
     <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
