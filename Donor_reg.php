@@ -112,7 +112,7 @@ INSERT INTO blood_donor
 								echo '
 								<div class="alert alert-success">
 									<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-									<strong>Success!</strong> Thank you for adding you as donor.
+									<strong>Success!</strong> Thank you for register.
 								</div>
 								';
 							}
