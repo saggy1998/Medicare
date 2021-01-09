@@ -48,7 +48,7 @@ s0.parentNode.insertBefore(s1,s0);
 			 <div class="col-md-4">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-medkit"></i> Request for Blood</h4>
+                        <h4><i class="fa fa-fw fa-medkit"></i> Request for Blood/Organ</h4>
                     </div>
                     <div class="panel-body">
                         <p>Every 2 seconds someone needs blood. Your blood helps more than one life at a time. Accident victims, premature babies, patients undergoing major surgeries require whole blood, where your blood after testing is used directly.  </p>
@@ -78,7 +78,7 @@ s0.parentNode.insertBefore(s1,s0);
                     </div>
                     <div class="panel-body">
                         <p>Register for donation camp and we will provide you donors for the camp to connect people in need and with few simple steps you can find blood donors who are ready to donate near by.  </p>
-                        <a href="Donor_reg.php" class="btn btn-primary">Register</a>
+                        <a href="camp_reg.php" class="btn btn-primary">Register</a>
                     </div>
                 </div>
             </div>

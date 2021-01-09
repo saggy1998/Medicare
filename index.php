@@ -33,13 +33,13 @@ s0.parentNode.insertBefore(s1,s0);
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('images/s1.jpg');"></div>
+                <div class="fill" style="background-image:url('images/heart.jpg');"></div>
                 <div class="carousel-caption">
                     
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('images/s2.jpg');"></div>
+                <div class="fill" style="background-image:url('images/organ.jpg');"></div>
                 <div class="carousel-caption">
                    
                 </div>
@@ -112,7 +112,7 @@ s0.parentNode.insertBefore(s1,s0);
         <!-- Portfolio Section -->
       <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header  text-primary">All Donor Camps</h2>
+                <h2 class="page-header  text-primary">Donation Camps</h2>
             </div>
             <div class="col-md-4 col-sm-6">
                 <a href="#">
@@ -225,6 +225,7 @@ s0.parentNode.insertBefore(s1,s0);
     })
     </script>
 
+<?php include"footer.php";?>
 </body>
 
 </html>

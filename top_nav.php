@@ -34,6 +34,7 @@ s0.parentNode.insertBefore(s1,s0);
                     <li><a href="contact.php"><i class="fa fa-envelope"></i> Contact us</a></li>
                     <li><a href="admin.php"><i class="fa fa-user-md"></i> Admin</a></li>
                     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;margin-left: 20px;">Login/SignUp</button>
+                    <img src="images/notification1.png" style="height: 35px;width: 35px;color:#fff;margin-left: 40px;">
 
 <div id="id01" class="modal">
   
@@ -50,7 +51,7 @@ s0.parentNode.insertBefore(s1,s0);
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
         
-      <button class="submit" type="submit">Login</button>
+      <button class="submit" type="submit" >Login</button>
       <button onclick="document.getElementById('id11').style.display='block'">Sign Up</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
@@ -63,6 +64,7 @@ s0.parentNode.insertBefore(s1,s0);
     </div>
   </form>
 </div>
+
 
 <!-- Button to open the modal -->
 

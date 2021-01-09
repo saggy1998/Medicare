@@ -100,22 +100,11 @@ include("top_nav.php");
 							<option value="B+">B+</option>
 							<option value="O+">O+</option>
 							<option value="AB+">AB+</option>
-							<option value="A1+">A1+</option>
-							<option value="A2+">A2+</option>
-							<option value="A1B+">A1B+</option>
-							<option value="A2B+">A2B+</option>
+							<option value="AB-">AB-</option>
 							<option value="A-">A-</option>
 							<option value="B-">B-</option>
 							<option value="O-">O-</option>
-							<option value="AB-">AB-</option>
-							<option value="A1-">A1-</option>
-							<option value="A2-">A2-</option>
-							<option value="A1B">A1B-</option>
-							<option value="A2B">A2B-</option>
-							<option value="A2B">Bombay o+</option>
-							<option value="A2B">Bombay o-</option>
-
-								</select>
+							</select>
 						</div>
 						 <div class="form-group">
 								<label class="control-label text-primary">Need Unit Of Blood</label>
@@ -173,7 +162,7 @@ include("top_nav.php");
 						  
 						  
 						   <div class="form-group">
-							<button class="btn btn-primary" id="BTN" name="submit"><i class="fa fa-send"></i> Request Now</button>
+							<button class="btn2 btn-primary" id="BTN" name="submit"><i class="fa fa-send"></i> Request                                                                           </button>
 						  </div>
 						 </form>
                     </div>

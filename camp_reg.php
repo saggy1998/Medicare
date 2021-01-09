@@ -17,7 +17,7 @@ include("top_nav.php");
         <div class="row">
             <div class="col-md-12">
                 <h3 class=" text-primary">
-					<i class='fa fa-users'></i> New Donor Registration
+					<i class='fa fa-users'></i> Camp Registration
                 </h3><hr>
 						<?php  include("blood_bread.php"); ?>
 
@@ -102,17 +102,18 @@ if($res->num_rows>0)
 
 $cityname=$_POST["CITY"];
 
+
 $sql="
-INSERT INTO blood_donor 
-(NAME, FATHER_NAME, GENDER, DOB, BLOOD, BODY_WEIGHT, EMAIL, ADDRESS, AREA, CITY, PINCODE, STATE, CONTACT_1, CONTACT_2, VOLUNTARY, VOLUNTARY_GROUP,NEW_DONOR, LAST_D_DATE, DONOR_PIC,COUNTRY)
+INSERT INTO camp 
+/*(C_NAME, ORG_NAME, CATEGORY, DOR,EMAIL, ADDRESS, AREA, CITY, PINCODE, STATE, CONTACT_1, CONTACT_2, ORGANIZE,ORGANIZATION_NAME,NEW_CAMP, LAST_C_DATE, CAMP_PIC,COUNTRY)*/
  VALUES 
- ('{$_POST["NAME"]}', '{$_POST["FATHER_NAME"]}', '{$_POST["GENDER"]}', '{$_POST["DOB"]}', '{$_POST["BLOOD"]}', '{$_POST["BODY_WEIGHT"]}', '{$_POST["EMAIL"]}', '{$_POST["ADDRESS"]}', '{$_POST["AREA"]}', '$cityname', '{$_POST["PINCODE"]}', '{$state}', '{$_POST["CONTACT_1"]}', '{$_POST["CONTACT_2"]}', '{$_POST["VOLUNTARY"]}', '{$_POST["VOLUNTARY_GROUP"]}', '{$_POST["NEW_DONOR"]}','{$_POST["LAST_D_DATE"]}', '{$img}','{$country}');";
+ ('{$_POST["C_NAME"]}', '{$_POST["ORG_NAME"]}', '{$_POST["CATEGORY"]}', '{$_POST["DOR"]}','{$_POST["EMAIL"]}', '{$_POST["ADDRESS"]}', '{$_POST["AREA"]}', '$cityname', '{$_POST["PINCODE"]}', '{$state}', '{$_POST["CONTACT_1"]}', '{$_POST["CONTACT_2"]}', '{$_POST["ORGANIZE"]}', '{$_POST["ORGANIZATION_NAME"]}', '{$_POST["NEW_CAMP"]}','{$_POST["LAST_C_DATE"]}', '{$img}','{$country}');";
 						if($con->query($sql))
 							{
 								echo '
 								<div class="alert alert-success">
 									<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-									<strong>Success!</strong> Thank you for adding you as donor.
+									<strong>Success!</strong> Thank you for adding your Camp we wil send our voluntory donors in your camp.
 								</div>
 								';
 							}
@@ -120,58 +121,35 @@ INSERT INTO blood_donor
 				?>
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title text-center" style="padding:5px;font-size:16px;font-weight:bold"><span class="fa fa-user "> </span> JOIN AS DONOR</h3>
+                        <h3 class="panel-title text-center" style="padding:5px;font-size:16px;font-weight:bold"><span class="fa fa-briefcase "> </span>Register Camp</h3>
                     </div>
 					
                     <div class="panel-body">
 						<form method="post" action="Donor_reg.php" autocomplete="off" role="form" enctype="multipart/form-data">
 						<div class="form-group">
-							<label class="control-label text-primary" for="NAME" >Name</label>
-							<input type="text" placeholder="Full Name" id="NAME" name="NAME"  required class="form-control input-sm">
+							<label class="control-label text-primary" for="NAME" >Camp Name</label>
+							<input type="text" placeholder="Camp Name" id="NAME" name="C_NAME"  required class="form-control input-sm">
 						</div>
 						<div class="form-group">
-							<label class="control-label text-primary" for="FATHER_NAME">Father Name</label>
-							<input type="text" placeholder="Father Name" id="FATHER_NAME" name="FATHER_NAME" required class="form-control input-sm">
+							<label class="control-label text-primary" for="ORG_NAME">Organization Name</label>
+							<input type="text" placeholder="organization name" id="ORG_NAME" name="ORG_NAME" required class="form-control input-sm">
 						</div>
 						
 						<div class="form-group">
-							<label class="control-label text-primary"  for="GENDER">Gender</label>
-								<select id="gen" name="GENDER" required class="form-control input-sm">
-									<option value="">Select Gender</option>
-									<option value="Male">Male</option>
-									<option value="Female">Female</option>
+							<label class="control-label text-primary"  for="CATEGORY">Select  category</label>
+								<select id="gen" name="CATEGORY" required class="form-control input-sm">
+									<option value="">Select Category</option>
+									<option value="Male">Organ Donation</option>
+									<option value="Female">Blood Donation</option>
 									
 								</select>
 						</div>
 						
 						<div class="form-group">
-							<label class="control-label text-primary" for="DOB">D.O.B</label>
+							<label class="control-label text-primary" for="DOB">Date Of Issue for Camp</label>
 							<input type="text"  placeholder="YYYY/MM/DD" required id="DOB" name="DOB"  class="form-control input-sm DATES">
 						</div>
 						
-						
-						<div class="form-group">
-							<label class="control-label text-primary" for="BLOOD" >Blood Group</label>
-						<select id="blood" name="BLOOD" required class="form-control input-sm">	
-							<option value="">Select Blood</option>
-							<option value="A+">A+</option>
-							<option value="B+">B+</option>
-							<option value="O+">O+</option>
-							<option value="AB+">AB+</option>
-							<option value="A1+">A1+</option>
-							<option value="A2+">A2+</option>
-							<option value="A1B+">A1B+</option>
-							<option value="A2B+">A2B+</option>
-							<option value="A-">A-</option>
-							<option value="B-">B-</option>
-							<option value="O-">O-</option>
-							<option value="AB-">AB-</option>
-							</select>
-						</div>
-						<div class="form-group">
-							<label class="control-label text-primary" for="BODY_WEIGHT" >Body Weight</label>
-							<input type="text" required placeholder="Weight In Kgs"  name="BODY_WEIGHT" id="BODY_WEIGHT" class="form-control input-sm">
-						</div>
 						 <div class="form-group">
 								<label class="control-label text-primary" for="EMAIL" >Email ID</label>
                                 <input type="email"  required name="EMAIL" id="EMAIL" class="form-control" placeholder="Email Address">
@@ -266,12 +244,12 @@ INSERT INTO blood_donor
                           </div>
 						  <hr>
 						   <div class="form-group">
-								<label class="control-label text-primary"><input type="checkbox" id="c1" >&nbsp; Voluntary Donor</label>
+								<label class="control-label text-primary"><input type="checkbox" id="c1" >&nbsp; Organized Camps Before</label>
 							</div>
 							<div id="volu">
 						<div class="form-group">
 										
-								<select name="VOLUNTARY"  id="VOLUNTARY"   class="form-control input-sm">
+								<select name="ORGANIZE"  id="ORGANIZE"   class="form-control input-sm">
 									<option value="">Select</option>
 									<option value="Yes">Yes</option>
 									<option selected value="No">No</option>
@@ -283,13 +261,13 @@ INSERT INTO blood_donor
 						 						<input type="text"  name="VOLUNTARY_GROUP" id="VOLUNTARY_GROUP"  class="form-control" placeholder="Voluntary Group Name" value="Nill">
 						 </div>
 						<div class="form-group">
-							<label class="control-label text-primary"  for="LAST_D_DATE">Last Blood Donoted Date</label>
-							<input type="text"  name="LAST_D_DATE" value="0000/00/00"  id="LAST_D_DATE" placeholder="YYYY/MM/DD" class="form-control input-sm DATES">
+							<label class="control-label text-primary"  for="LAST_C_DATE">Last Camp Taken Date</label>
+							<input type="text"  name="LAST_C_DATE" value="0000/00/00"  id="LAST_C_DATE" placeholder="YYYY/MM/DD" class="form-control input-sm DATES">
 						</div>
 					</div>
 						  <hr>
 						  <div class="form-group" id="new">
-							<label class="control-label text-primary"  for="NEW_DONOR">New Donor</label>
+							<label class="control-label text-primary"  for="NEW_DONOR">New Register</label>
 								<select name="NEW_DONOR"  id="NEW_DONOR"  class="form-control input-sm">
 									<option value="">Select</option>
 									<option value="Yes" >Yes</option>
@@ -304,14 +282,12 @@ INSERT INTO blood_donor
 						  </div>
 						
 							  <div class="form-group">
-								<label class="control-label text-success"><input type="checkbox" checked id="c2">&nbsp; I have read the eligibility criteria and confirm that i am eligible to donate blood.</label> 
+								<label class="control-label text-success"><input type="checkbox" checked id="c2">&nbsp; I have read the eligibility criteria and confirm that i am eligible to take Donation Camp.</label> 
 								<label class="control-label text-success"><input type="checkbox" checked id="c3" >&nbsp; I agree to the Term and Conditions and consent to have my contact and donor information published to the potential blood recipients.</label>
 						  </div>
 						
-					
-						
 						  <div class="form-group">
-							<button class="btn btn-primary" type="submit" name="submit" >Registar Now</button>
+							<button class="btn btn-primary" type="submit" name="submit" >Registar</button>
 						  </div>
 						 </form>
                     </div>
