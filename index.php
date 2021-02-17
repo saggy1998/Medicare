@@ -63,6 +63,62 @@ s0.parentNode.insertBefore(s1,s0);
 
     <!-- Page Content -->
     <div class="container">
+        <!-- Medical Facilities -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header text-primary">
+                  Medical Facilities
+                </h1>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4>E-MediShop</h4>
+                    </div>
+                    <div class="panel-body">
+                        <!-- <p>Have you at anytime witnessed a relative of yours or a close friend searching frantically for a blood donor, when blood banks say out of stock, the donors in mind are out of reach and the time keeps ticking?This thought laid our foundation. </p> -->
+                        <a href="e_medishop.php" class="btn btn-primary">Shop</a>
+                    </div>
+                </div>
+            </div>
+
+			<div class="col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-medkit"></i>E-Hospitals</h4>
+                    </div>
+                    <div class="panel-body">
+                        <!-- <p>Every 2 seconds someone needs blood. Your blood helps more than one life at a time. Accident victims, premature babies, patients undergoing major surgeries require whole blood, where your blood after testing is used directly.  </p> -->
+                        <a href="e_hospital.php" class="btn btn-primary">Enter</a>
+                    </div>
+                </div>
+            </div>
+			 
+			<div class="col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-search"></i>E-Doctor</h4>
+                    </div>
+                    <div class="panel-body">
+                        <!-- <p>Some people who have serious injuries they need blood transfusions to replace blood lost during the injury.Regular blood donors ensure that a safe and plentiful supply of blood is available whenever and wherever it is needed.</p> -->
+                        <a href="e_doctor.php" class="btn btn-primary">Request</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-search"></i>E-MediCamps</h4>
+                    </div>
+                    <div class="panel-body">
+                        <!-- <p>Some people who have serious injuries they need blood transfusions to replace blood lost during the injury.Regular blood donors ensure that a safe and plentiful supply of blood is available whenever and wherever it is needed.</p> -->
+                        <a href="e_camp.php" class="btn btn-primary">Donate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Marketing Icons Section -->
         <div class="row">
@@ -154,7 +210,6 @@ s0.parentNode.insertBefore(s1,s0);
             </div>
             <div class="col-md-6">
               
-
 			<ul>
 				<li>Giving blood saves lives. The blood you give is a lifeline in an emergency and for people who need long-term treatments.</li>
 
